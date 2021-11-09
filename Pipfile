@@ -8,6 +8,7 @@ numpy = "*"
 matplotlib = "*"
 casadi = "*"
 jupyter = "*"
+ipympl = "*"
 
 [dev-packages]
 
