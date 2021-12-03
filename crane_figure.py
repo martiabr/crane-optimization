@@ -41,7 +41,7 @@ rect_height = 0.15
 beam_height = 0.05
 radius = 750
 
-fig, ax = plt.subplots(figsize=(8,5))
+fig, ax = plt.subplots(figsize=(6,4))
 
 line_1, = ax.plot([-1.2,1.2], [0,0], 'k--', alpha=0.7, lw=1.5)
 rect_1 = ax.add_patch(Rectangle((0 - 1, 0 - 0.5*beam_height), 2, beam_height, facecolor='firebrick', edgecolor='k', lw=2))
@@ -52,9 +52,9 @@ y_pendulum = -l * np.cos(theta_0)
 line_2, = ax.plot([r_0, x_pendulum], [0, y_pendulum], '-o', c='k', lw=3, ms=6)
 point_1 = ax.scatter(x_pendulum, y_pendulum, s=radius, facecolors='darkorange', edgecolors='k', lw=2)
 
-ax.scatter(r_0, -l, s=30, facecolor='firebrick')
+ax.scatter(r_0, -l, s=30, facecolor='firebrick', zorder=5)
 ax.text(r_0, -l-0.1, 'Start', horizontalalignment='center')
-ax.scatter(r_end, -l, s=30, facecolor='firebrick')
+ax.scatter(r_end, -l, s=30, facecolor='firebrick', zorder=5)
 ax.text(r_end, -l-0.1, 'Target', horizontalalignment='center')
 
 line_3, = ax.plot([-0.5, -0.5], [0,-1], 'k--', alpha=0.7, lw=1.5)

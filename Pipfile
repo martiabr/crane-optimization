@@ -9,6 +9,8 @@ matplotlib = "*"
 casadi = "*"
 jupyter = "*"
 ipympl = "*"
+ipykernel = "*"
+notebook = "*"
 
 [dev-packages]
 
