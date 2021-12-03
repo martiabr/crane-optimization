@@ -69,6 +69,6 @@ plt.xlim([-1, 1])
 plt.ylim([-1.35, 0.35])
 ax.axis('off')
 
-plt.savefig('crane_fig.png', dpi=400, bbox_inches='tight')
+plt.savefig('crane_fig.png', dpi=200, bbox_inches='tight')
 
 plt.show()
