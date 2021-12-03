@@ -41,7 +41,7 @@ rect_height = 0.15
 beam_height = 0.05
 radius = 750
 
-fig, ax = plt.subplots(figsize=(6,4))
+fig, ax = plt.subplots(figsize=(8,5))
 
 line_1, = ax.plot([-1.2,1.2], [0,0], 'k--', alpha=0.7, lw=1.5)
 rect_1 = ax.add_patch(Rectangle((0 - 1, 0 - 0.5*beam_height), 2, beam_height, facecolor='firebrick', edgecolor='k', lw=2))
@@ -69,8 +69,7 @@ ax.text(-0.43, -0.4, r'$\theta$', horizontalalignment='center')
 plt.axis('equal')
 plt.xlim([-1, 1])
 plt.ylim([-1.35, 0.35])
-# ax.tick_params(axis='both', which='both', bottom=False, top=False, left=False, right=False, labelleft=False, labelbottom=False)
-# ax.axis('off')
+ax.axis('off')
 
 plt.savefig('crane_fig.png', dpi=400, bbox_inches='tight')
 
