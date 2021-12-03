@@ -1,8 +1,6 @@
 import numpy as np
 from matplotlib import pyplot as plt
-from matplotlib.patches import Rectangle
-from matplotlib.lines import Line2D
-from matplotlib.patches import Arc
+from matplotlib.patches import Rectangle, Arc
 
 def get_angle_plot(line1, line2, offset=1, color=None, origin=(0, 0), 
                    len_x_axis = 1, len_y_axis = 1):
@@ -30,7 +28,7 @@ def get_angle_plot(line1, line2, offset=1, color=None, origin=(0, 0),
         color = line1.get_color() # Uses the color of line 1 if color parameter is not passed.
     
     return Arc(origin, len_x_axis*offset, len_y_axis*offset, 0, 
-               theta1, theta2, color=color, 
+               theta1, theta2, color=color, lw=1.5,
                label = r'${:.4}^\circ$'.format(float(angle)))
 
 r_0 = -0.5
