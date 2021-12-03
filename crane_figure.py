@@ -69,6 +69,9 @@ ax.text(-0.43, -0.4, r'$\theta$', horizontalalignment='center')
 plt.axis('equal')
 plt.xlim([-1, 1])
 plt.ylim([-1.35, 0.35])
+# ax.tick_params(axis='both', which='both', bottom=False, top=False, left=False, right=False, labelleft=False, labelbottom=False)
+# ax.axis('off')
+
 plt.savefig('crane_fig.png', dpi=400, bbox_inches='tight')
 
 plt.show()
