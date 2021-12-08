@@ -48,8 +48,8 @@ line_1, = ax.plot([-1.2,1.2], [0,0], 'k--', alpha=0.7, lw=1.5)
 rect_1 = ax.add_patch(Rectangle((0 - 1, 0 - 0.5*beam_height), 2, beam_height, facecolor='firebrick', edgecolor='k', lw=2))
 rect_2 = ax.add_patch(Rectangle((r_0 - 0.2, 0.0 - 0.5*rect_height), 0.4, rect_height, facecolor='indianred', edgecolor='k', lw=2))
 
-ax.arrow(r_0, 0, 0.4, 0, width=0.03, head_width=0.1, head_length=0.1, lw=1, facecolor='darkorange', zorder=2)
-ax.text(r_0 + 0.42, 0.09, r'$F$', horizontalalignment='center')
+ax.arrow(r_0, 0, 0.35, 0, width=0.025, head_width=0.09, head_length=0.09, lw=1.25, facecolor='darkorange', zorder=2)
+ax.text(r_0 + 0.37, 0.09, r'$F$', horizontalalignment='center')
 
 x_pendulum = r_0 + l * np.sin(theta_0)
 y_pendulum = -l * np.cos(theta_0)
