@@ -1,6 +1,6 @@
 import numpy as np
 from matplotlib import pyplot as plt
-from matplotlib.patches import Rectangle, Arc
+from matplotlib.patches import Rectangle, Arc, Circle
 # from matplotlib import rcParams
 
 def get_angle_plot(line1, line2, offset=1, color=None, origin=(0, 0), 
@@ -42,6 +42,11 @@ rect_height = 0.15
 beam_height = 0.05
 radius = 750
 
+x_obstacle = 0.25
+y_obstacle = -1.0
+r_obstacle = 0.1
+r_pendulum = 0.08
+
 fig, ax = plt.subplots(figsize=(8,5))
 
 line_1, = ax.plot([-1.2,1.2], [0,0], 'k--', alpha=0.7, lw=1.5)
@@ -54,7 +59,9 @@ ax.text(r_0 + 0.37, 0.09, r'$F$', horizontalalignment='center')
 x_pendulum = r_0 + l * np.sin(theta_0)
 y_pendulum = -l * np.cos(theta_0)
 line_2, = ax.plot([r_0, x_pendulum], [0, y_pendulum], '-o', c='k', lw=3, ms=6)
-point_1 = ax.scatter(x_pendulum, y_pendulum, s=radius, facecolors='darkorange', edgecolors='k', lw=2)
+circle_1 = ax.add_patch(Circle([x_pendulum, y_pendulum], radius=r_pendulum, facecolor='darkorange', edgecolor='k', lw=2))
+
+circle_2 = ax.add_patch(Circle([x_obstacle, y_obstacle], radius=r_obstacle, facecolor='orangered', edgecolor='k', lw=2))
 
 ax.scatter(r_0, -l, s=30, facecolor='firebrick', zorder=5)
 ax.text(r_0, -l-0.1, 'Start', horizontalalignment='center')
@@ -75,6 +82,7 @@ plt.xlim([-1, 1])
 plt.ylim([-1.35, 0.35])
 ax.axis('off')
 
-plt.savefig('crane_fig.png', dpi=200, bbox_inches='tight')
+# plt.savefig('crane_fig.png', dpi=200, bbox_inches='tight')
+plt.savefig('crane_fig_obstacle.png', dpi=200, bbox_inches='tight')
 
 plt.show()
