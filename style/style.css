@@ -9,7 +9,7 @@
   position: relative;
   flex-basis: calc(20% - 10px);
   margin: 5px;
-  border: 1px solid;
+  /* border: 1px solid; */
   box-sizing: border-box;
 }
 
